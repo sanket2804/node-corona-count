@@ -24,7 +24,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
-        title : 'Corona',
+        title : 'Corona count by country',
         name: 'Sanket'
     })
 })
@@ -77,7 +77,17 @@ app.get('/corona', (req, res) => {
         }
         res.send({
             country: req.query.country,
-            count: data['Total_cases']
+            count: data['Total_cases'],
+            new_cases: data['new_cases'],
+            total_deaths: data['total_deaths'],
+            new_deaths: data['new_deaths'],
+            total_recovered: data['total_recovered'],
+            serious_critical: data['serious_critical'],
+            total_cases_per1m: data['total_cases_per1m'],
+            deaths_per1m: data['deaths_per1m'],
+            total_tests: data['total_tests'],
+            total_tests_per1m: data['total_tests_per1m'],
+            record_date_pure: data['record_date_pure']
         })
       })
 

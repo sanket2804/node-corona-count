@@ -24,8 +24,18 @@ const total = (country, callback) => {
       const latest_data = data['latest_stat_by_country']
       
       callback(undefined,{
+        Country : latest_data[0].country_name,
         Total_cases:latest_data[0].total_cases,
-        Country : latest_data[0].country_name
+        new_cases:latest_data[0].new_cases,
+        total_deaths:latest_data[0].total_deaths,
+        new_deaths:latest_data[0].new_deaths,
+        total_recovered:latest_data[0].total_recovered,
+        serious_critical:latest_data[0].serious_critical,
+        total_cases_per1m:latest_data[0].total_cases_per1m,
+        deaths_per1m:latest_data[0].deaths_per1m,
+        total_tests:latest_data[0].total_tests,
+        total_tests_per1m:latest_data[0].total_tests_per1m,
+        record_date_pure:latest_data[0].record_date_pure,
       })
       }
     });
