@@ -12,7 +12,7 @@ formdata.addEventListener('submit', (e) => {
 
     const location = search.value
     p1.textContent = 'Loading...'
-    fetch('http://localhost:3000/corona?country=' + location).then((response) => {
+    fetch('/corona?country=' + location).then((response) => {
     response.json().then((data) => {
         if(data.error){
             p1.textContent = data.error
