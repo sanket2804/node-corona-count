@@ -17,7 +17,7 @@ const total = (country, callback) => {
         callback('Unable connect to service',undefined)
       }
       else if (body === ""){
-        callback('Unable to find country',undefined)
+        callback('Unable to find country you entered',undefined)
       }
       else {
       const data = JSON.parse(body)

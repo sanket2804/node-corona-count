@@ -16,6 +16,7 @@ formdata.addEventListener('submit', (e) => {
     response.json().then((data) => {
         if(data.error){
             p1.textContent = data.error
+            p2.textContent = ""
         }else{
             p1.textContent = data.country
             p2.textContent = data.count
